@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Alex Repo.iml" filepath="$PROJECT_DIR$/Alex Repo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Ascii-art/Ascii-art.iml" filepath="$PROJECT_DIR$/Ascii-art/Ascii-art.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BasicExercises/BasicExercises.iml" filepath="$PROJECT_DIR$/BasicExercises/BasicExercises.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DateAndTimeExercises/DateAndTimeExercises.iml" filepath="$PROJECT_DIR$/DateAndTimeExercises/DateAndTimeExercises.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EnumsExercises/EnumsExercises.iml" filepath="$PROJECT_DIR$/EnumsExercises/EnumsExercises.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ExercisesArrays/ExercisesArrays.iml" filepath="$PROJECT_DIR$/ExercisesArrays/ExercisesArrays.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ExtraExercises/ExtraExercises.iml" filepath="$PROJECT_DIR$/ExtraExercises/ExtraExercises.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HotelExercises/HotelExercises.iml" filepath="$PROJECT_DIR$/HotelExercises/HotelExercises.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LoopExercises/LoopExercises.iml" filepath="$PROJECT_DIR$/LoopExercises/LoopExercises.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OOP/OOP.iml" filepath="$PROJECT_DIR$/OOP/OOP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/StringExercises/StringExercises.iml" filepath="$PROJECT_DIR$/StringExercises/StringExercises.iml" />
+    </modules>
+  </component>
+</project>
