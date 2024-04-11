@@ -1,6 +1,47 @@
-public class Movie extends Goods {
+import java.util.HashMap;
+
+public class Movie {
     MovieGenre genre;
     String director;
+    private long productID;
+    private String title;
+    private int price;
+
+    public Movie(String title, MovieGenre genre, int price, long productID) {
+        setTitle(title);
+        setGenre(genre);
+        setPrice(price);
+        setProductID(productID);
+    }
+
+    public Movie(String title, MovieGenre genre, int price, String director, long productID) {
+        this(title, genre, price, productID);
+        setDirector(director);
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
+
+    public long getProductID() {
+        return productID;
+    }
+
+    public void setProductID(long productID) {
+        this.productID = productID;
+    }
 
     public MovieGenre getGenre() {
         return genre;
@@ -18,14 +59,26 @@ public class Movie extends Goods {
         this.genre = genre;
     }
 
-    public Movie(String title, MovieGenre genre, int price) {
-        setTitle(title);
-        this.genre = genre;
-        setPrice(price);
+    public void printMovieDetails() {
+        System.out.println("ID: " + productID + ";");
+        System.out.println("Title: " + title + ";");
+        System.out.println("Genre: " + genre + ";");
+        if (director != null) {
+            System.out.println("Director: " + director + ";");
+        }
+
+        System.out.println("Price: " + price + "€.");
+        System.out.println();
     }
 
-    public Movie(String title, MovieGenre genre, int price, String director) {
-        this(title, genre, price);
-        this.director = director;
+    public static Movie findMoviesByID(long id, HashMap<Long, Movie> movies) {
+        Movie movie;
+        try {
+            movie = movies.get(id);
+        }
+        catch (Exception e) {
+            return null;
+        }
+        return movie;
     }
 }
