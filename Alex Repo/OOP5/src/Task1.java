@@ -11,10 +11,10 @@ public class Task1 {
 
         products.put(2000001L, new Movie("Police Academy", MovieGenre.COMEDY, 10, 1000004));
         products.put(2000002L, new Movie("Terminator", MovieGenre.ACTION, 20, 1000005));
-        products.put(2000003L, new Movie("Oppenheimer", MovieGenre.DRAMA, 35, "Christopher Nolan", 1000006));
+        products.put(2000003L, new MovieWithDirector("Oppenheimer", MovieGenre.DRAMA, 35, "Christopher Nolan", 1000006));
 
         for (Product product : products.values()) {
-            product.printProductDetails();
+            product.printDetails();
         }
 
 
@@ -24,7 +24,7 @@ public class Task1 {
             System.out.println("Didn't find a movie with productId: " + id + ".");
         } else {
             System.out.println("Found this movie: ");
-            search.printMovieDetails();
+            search.printDetails();
         }
 
         id = 20000004;
@@ -33,7 +33,7 @@ public class Task1 {
             System.out.println("Didn't find a movie with productId: " + id + ".");
         } else {
             System.out.println("Found this movie: ");
-            search.printMovieDetails();
+            search.printDetails();
         }
 
         System.out.println("\n" + products.get(1000002L));

@@ -24,15 +24,18 @@ public class Book extends Product {
         this.title = title;
     }
 
-    public void printBookDetails() {
-        System.out.println("Title: " + title + ";");
-        System.out.println("Author: " + author + ";");
-        System.out.println("Price: " + price + "€.");
-        System.out.println();
-    }
 
     @Override
     public String toString() {
         return "Title: " + title + "; Author: " + author;
+    }
+
+    @Override
+    public void printDetails() {
+        System.out.println("ID: " + productID + ";");
+        System.out.println("Title: " + getTitle() + ";");
+        System.out.println("Author: " + getAuthor() + ";");
+        System.out.println("Price: " + price + "€.");
+        System.out.println();
     }
 }

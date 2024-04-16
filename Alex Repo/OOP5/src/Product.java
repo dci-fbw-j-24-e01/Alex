@@ -1,4 +1,4 @@
-public class Product {
+public abstract      class Product {
     protected long productID;
     protected int price;
 
@@ -23,24 +23,5 @@ public class Product {
         this.price = price;
     }
 
-    public void printProductDetails() {
-
-        System.out.println("ID: " + productID + ";");
-
-        if (this instanceof Movie movie) {
-            System.out.println("Title: " + movie.getTitle() + ";");
-            System.out.println("Genre: " + movie.getGenre() + ";");
-            if (movie.getDirector() != null) {
-                System.out.println("Director: " + movie.getDirector() + ";");
-            }
-
-        } else {
-            Book book = (Book)this;
-            System.out.println("Title: " + book.getTitle() + ";");
-            System.out.println("Author: " + book.getAuthor() + ";");
-        }
-        System.out.println("Price: " + price + "€.");
-        System.out.println();
-
-    }
+    public abstract void printDetails();
 }
