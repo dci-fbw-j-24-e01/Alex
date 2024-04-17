@@ -1,24 +1,32 @@
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 
 public class Task1 {
     public static void main(String[] args) {
 
-        HashMap<Long, Product> products = new HashMap<>();
+        ArrayList<Product> products = new ArrayList<>();
+        ArrayList<Movie> movies = new ArrayList<>();
 
-        products.put(1000001L, new Book("World War Two", "Winston Churchill", 40, 1000001));
-        products.put(1000002L, new Book("War and Peace", "Lev Tolstoy", 80, 1000002));
-        products.put(1000003L, new ChildrensBook("Grimms' Fairy Tales", "The Brothers Grimm", 100, "From 6 years", 1000003));
+        products.add(new Book("World War Two", "Winston Churchill", 40, 1000001));
+        products.add(new Book("War and Peace", "Lev Tolstoy", 80, 1000002));
+        products.add(new ChildrensBook("Grimms' Fairy Tales", "The Brothers Grimm", 100, "From 6 years", 1000003));
 
-        products.put(2000001L, new Movie("Police Academy", MovieGenre.COMEDY, 10, 1000004));
-        products.put(2000002L, new Movie("Terminator", MovieGenre.ACTION, 20, 1000005));
-        products.put(2000003L, new MovieWithDirector("Oppenheimer", MovieGenre.DRAMA, 35, "Christopher Nolan", 1000006));
+        movies.add(new Movie("Police Academy", MovieGenre.COMEDY, 10, 1000006));
+        movies.add(new Movie("Terminator", MovieGenre.ACTION, 20, 1000005));
+        movies.add(new MovieWithDirector("Oppenheimer", MovieGenre.DRAMA, 35, "Christopher Nolan", 1000004));
 
-        for (Product product : products.values()) {
+        products.addAll(movies);
+        Collections.sort(movies);
+
+        for (Movie movie : movies) {
+            System.out.println(movie.getProductID());
+        }
+        for (Product product : products) {
             product.printDetails();
         }
 
-
-        long id = 2000002;
+        long id = 1000002;
         Movie search = Movie.findMoviesByID(id, products);
         if (search == null) {
             System.out.println("Didn't find a movie with productId: " + id + ".");
@@ -27,7 +35,7 @@ public class Task1 {
             search.printDetails();
         }
 
-        id = 20000004;
+        id = 1000004;
         search = Movie.findMoviesByID(id, products);
         if (search == null) {
             System.out.println("Didn't find a movie with productId: " + id + ".");
@@ -36,6 +44,6 @@ public class Task1 {
             search.printDetails();
         }
 
-        System.out.println("\n" + products.get(1000002L));
+        System.out.println(products.get(1));
     }
 }

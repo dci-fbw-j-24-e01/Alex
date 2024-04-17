@@ -1,11 +1,30 @@
-public class Book extends Product {
-    String author;
-    private String title;
+public class Book implements Product {
+    protected String author;
+    protected String title;
+    protected long productID;
+    protected int price;
 
-    public Book(String title, String author, int price, long id) {
-        super(price, id);
+    public Book(String title, String author, int price, long productID) {
+        this.price = price;
+        this.productID = productID;
         setTitle(title);
         setAuthor(author);
+    }
+
+    public long getProductID() {
+        return productID;
+    }
+
+    public void setProductID(long productID) {
+        this.productID = productID;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
     }
 
     public String getAuthor() {
