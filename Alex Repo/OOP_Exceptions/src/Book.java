@@ -4,27 +4,14 @@ public class Book implements Product {
     protected long productID;
     protected int price;
 
-    public Book(String title, String author, int price, long productID) {
+    public Book(String title, String author, int price, long productID) throws IncorrectProductIdException {
         this.price = price;
+        if (productID < 0) {
+            throw new IncorrectProductIdException(productID);
+        }
         this.productID = productID;
         setTitle(title);
         setAuthor(author);
-    }
-
-    public long getProductID() {
-        return productID;
-    }
-
-    public void setProductID(long productID) {
-        this.productID = productID;
-    }
-
-    public int getPrice() {
-        return price;
-    }
-
-    public void setPrice(int price) {
-        this.price = price;
     }
 
     public String getAuthor() {

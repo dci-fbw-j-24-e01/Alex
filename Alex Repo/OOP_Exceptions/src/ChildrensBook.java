@@ -1,7 +1,7 @@
 public class ChildrensBook extends Book {
     private String recommendedAgeInfo;
 
-    public ChildrensBook(String title, String author, int price, String recommendedAgeInfo, long id) {
+    public ChildrensBook(String title, String author, int price, String recommendedAgeInfo, long id) throws IncorrectProductIdException {
         super(title, author, price, id);
         this.recommendedAgeInfo = recommendedAgeInfo;
     }

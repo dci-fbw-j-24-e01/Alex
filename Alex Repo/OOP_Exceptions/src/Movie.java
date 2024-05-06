@@ -6,8 +6,11 @@ public class Movie implements Product, Comparable<Movie> {
     protected long productID;
     protected int price;
 
-    public Movie(String title, MovieGenre genre, int price, long productID) {
+    public Movie(String title, MovieGenre genre, int price, long productID) throws IllegalArgumentException {
         this.price = price;
+        if (productID < 0) {
+            throw new IllegalArgumentException("productID is less than 0");
+        }
         this.productID = productID;
         setTitle(title);
         setGenre(genre);
@@ -15,18 +18,6 @@ public class Movie implements Product, Comparable<Movie> {
 
     public long getProductID() {
         return productID;
-    }
-
-    public void setProductID(long productID) {
-        this.productID = productID;
-    }
-
-    public int getPrice() {
-        return price;
-    }
-
-    public void setPrice(int price) {
-        this.price = price;
     }
 
     public String getTitle() {
@@ -65,6 +56,7 @@ public class Movie implements Product, Comparable<Movie> {
 
     @Override
     public int compareTo(Movie movie) {
+
         if(productID < movie.productID) {
             return -1;
         } else if (productID > movie.productID) {
