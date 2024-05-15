@@ -9,8 +9,7 @@ public class Exercise4 {
         int withdrawal = scanner.nextInt();
         if (withdrawal > available) {
             System.out.println("Not enough money on your account. Gotta work harder...");
-        }
-        else {
+        } else {
             System.out.println("Transaction confirmed. Take your cash.");
         }
     }

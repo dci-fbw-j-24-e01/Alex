@@ -5,7 +5,7 @@ public class IncorrectProductIdException extends Exception {
         this.incorrectNumber = incorrectNumber;
     }
 
-    public String toMessage() {
+    public String getMessage() {
         return "There is an incorrect productId " + incorrectNumber;
     }
 }
