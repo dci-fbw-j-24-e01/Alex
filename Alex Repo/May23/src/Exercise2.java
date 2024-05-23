@@ -12,7 +12,6 @@ public class Exercise2 {
         people.add(new Person("Lana", 8));
         people.add(new Person("Alex", 36));
 
-
         people.stream()
                 .filter(o1 -> o1.getAge() < 18)
                 .map(Person::getName)

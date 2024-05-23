@@ -18,6 +18,6 @@ public class Exercise4 {
 
         long finish = System.currentTimeMillis();
 
-        System.out.println(finish - start + " ms");
+        System.out.print("\n" + (finish - start) + " ms");
     }
 }
