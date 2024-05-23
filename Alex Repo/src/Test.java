@@ -1,7 +1,9 @@
 
 public class Test {
     public static void main(String[] args) {
-        LuhnValidator validator = new LuhnValidator();
-        System.out.println(validator.isValid("055 444 285"));
+        int[] ints = {0};
+        SumOfMultiples som = new SumOfMultiples(1, ints);
+
+        System.out.println(som.getSum());
     }
 }
