@@ -7,7 +7,7 @@ public class Exercise9 {
         double average = ints.stream()
                 .mapToDouble(i -> i)
                 .average()
-                .getAsDouble();
+                .orElse(0.0);
 
         System.out.println(average);
     }

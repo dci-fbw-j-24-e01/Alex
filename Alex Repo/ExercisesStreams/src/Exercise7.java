@@ -10,9 +10,10 @@ public class Exercise7 {
 
         int result = ints.stream()
                 .sorted()
+                .distinct()
                 .skip(1)
                 .findFirst()
-                .get();
+                .orElse(0);
 
         System.out.println(result);
     }
