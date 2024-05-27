@@ -1,9 +1,10 @@
+import java.util.List;
 
 public class Test {
     public static void main(String[] args) {
-        int[] ints = {0};
-        SumOfMultiples som = new SumOfMultiples(1, ints);
+        List<Long> numbers = List.of(0x40L, 0x7fL);
 
-        System.out.println(som.getSum());
+        VariableLengthQuantity test = new VariableLengthQuantity();
+        System.out.println(test.encode(numbers));
     }
 }
