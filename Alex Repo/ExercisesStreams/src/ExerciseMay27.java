@@ -5,7 +5,6 @@ import java.net.URL;
 import java.util.*;
 import java.util.stream.Collectors;
 
-
 public class ExerciseMay27 {
     public static void main(String[] args) throws URISyntaxException, FileNotFoundException {
         URL sampleUrl = ExerciseMay27.class.getResource("sample.txt");
@@ -58,6 +57,8 @@ public class ExerciseMay27 {
         System.out.println("There is " + counter + " word" + (counter == 1 ? "" : "s") + " in the file.");
 
         // Bonus
+
+        fileContent.get(2).replaceAll(String::toLowerCase);
 
         Map<String, Integer> frequency = fileContent.get(2).stream()
                 .collect(Collectors.toMap(e -> e, e -> 1, Integer::sum));
