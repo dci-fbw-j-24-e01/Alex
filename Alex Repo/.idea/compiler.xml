@@ -6,8 +6,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="JsonExercises" />
+        <module name="Jun5" />
+        <module name="Jun4" />
         <module name="Jun3" />
+        <module name="JsonExercises" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

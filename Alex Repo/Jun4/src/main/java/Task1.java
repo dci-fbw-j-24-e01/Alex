@@ -1,15 +1,16 @@
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+
 import java.io.IOException;
 import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.List;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Task1 {
     public static void main(String[] args) throws IOException {
-        URL customerURL = Task1.class.getResource("/customer.json");
+        URL customerURL = Task1.class.getResource("/users.json");
         Path customerPath = Path.of(customerURL.getPath().replace("%20", " "));
         String content = Files.readString(customerPath);
 
