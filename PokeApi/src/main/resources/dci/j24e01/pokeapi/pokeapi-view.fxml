@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox maxHeight="525.0" maxWidth="650.0" minHeight="525.0" minWidth="650.0" prefHeight="525.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dci.j24e01.pokeapi.PokeApiController">
+    <children>
+        <VBox maxHeight="525.0" maxWidth="475.0" minHeight="525.0" minWidth="475.0" prefHeight="525.0" prefWidth="475.0">
+            <children>
+                <ImageView fx:id="imageView" fitHeight="475.0" fitWidth="475.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@default.png" />
+               </image></ImageView>
+                <HBox alignment="CENTER" maxHeight="50.0" maxWidth="475.0" minHeight="50.0" minWidth="475.0" prefHeight="50.0" prefWidth="475.0" VBox.vgrow="NEVER">
+                    <children>
+                        <Button fx:id="playSoundButton" mnemonicParsing="false" text="Play Sound" textAlignment="CENTER" visible="false">
+                            <opaqueInsets>
+                                <Insets left="25.0" right="25.0" />
+                            </opaqueInsets>
+                            <HBox.margin>
+                                <Insets left="15.0" right="35.0" />
+                            </HBox.margin>
+                        </Button>
+                    </children>
+                    <VBox.margin>
+                        <Insets />
+                    </VBox.margin>
+                </HBox>
+            </children>
+        </VBox>
+        <VBox prefHeight="200.0" prefWidth="100.0">
+            <ListView fx:id="pokemonsList" focusTraversable="false" maxHeight="475.0" minHeight="475.0" prefHeight="475.0" prefWidth="200.0" />
+            <TextField fx:id="input" maxWidth="175.0" minWidth="175.0" onAction="#search" prefWidth="175.0" promptText="Enter a name or #" />
+            <Button fx:id="searchButton" maxWidth="175.0" minWidth="175.0" mnemonicParsing="false" onAction="#search" prefWidth="175.0" text="Search" />
+        </VBox>
+    </children>
+</HBox>
