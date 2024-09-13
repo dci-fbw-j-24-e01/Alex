@@ -7,6 +7,6 @@ public class Exercise3 {
         float usd = scanner.nextFloat();
         float ratio = 0.9230f;
         float eur = usd * ratio;
-        System.out.printf("%.2f USD is %.2fEUR", usd, eur);
+        System.out.printf("%.2f $ is %.2f €", usd, eur);
     }
 }

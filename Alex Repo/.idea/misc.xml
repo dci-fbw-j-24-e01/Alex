@@ -9,11 +9,15 @@
         <option value="$PROJECT_DIR$/JsonExercises/pom.xml" />
         <option value="$PROJECT_DIR$/Jun4/pom.xml" />
         <option value="$PROJECT_DIR$/Jun5/pom.xml" />
+        <option value="$PROJECT_DIR$/OKHTTP/pom.xml" />
+        <option value="$PROJECT_DIR$/Jun19/pom.xml" />
+        <option value="$PROJECT_DIR$/Exercism/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/6May/pom.xml" />
+        <option value="$PROJECT_DIR$/Exercism/pom.xml" />
       </set>
     </option>
   </component>

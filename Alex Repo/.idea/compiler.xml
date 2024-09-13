@@ -8,12 +8,15 @@
         <outputRelativeToContentRoot value="true" />
         <module name="Jun5" />
         <module name="Jun4" />
+        <module name="Jun19" />
         <module name="Jun3" />
         <module name="JsonExercises" />
+        <module name="OKHTTP" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="6May" target="21" />
+      <module name="Exercism" target="22" />
     </bytecodeTargetLevel>
   </component>
 </project>
