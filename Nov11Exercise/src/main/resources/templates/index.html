@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cities</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        th {
+            cursor: pointer;
+        }
+        .disabled {
+            color: #ccc;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+<h2>City Table</h2>
+
+<label for="sortOptions">Sort by:</label>
+<select id="sortOptions" onchange="refresh()">
+    <option value="id">ID</option>
+    <option value="name">Name</option>
+    <option value="country_code">Country Code</option>
+    <option value="district">District</option>
+    <option value="population">Population</option>
+</select>
+
+<label for="resultsPerPage">Results per page:</label>
+<select id="resultsPerPage" onchange="refresh()">
+    <option value="25">25</option>
+    <option value="50">50</option>
+    <option value="100">100</option>
+    <option value="150">150</option>
+</select>
+
+<table id="cityTable">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Country Code</th>
+        <th>District</th>
+        <th>Population</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr th:each="city : ${cities}">
+            <td th:text="${city.id}"></td>
+            <td th:text="${city.name}"></td>
+            <td th:text="${city.country_code}"></td>
+            <td th:text="${city.district}"></td>
+        </tr>
+    </tbody>
+</table>
+
+<div>
+    <button id="prevPage" onclick="prevPage()">Previous</button>
+    <button id="nextPage" onclick="nextPage()">Next</button>
+</div>
+
+<script>
+
+</script>
+</body>
+</html>
